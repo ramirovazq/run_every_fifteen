@@ -52,4 +52,4 @@ if __name__ == "__main__":
         for minute in range(fifteen_slices):         
             answer = get_account_ids_to_run(example_list, fifteen_slices, minute)
             print("minute {} .... answer {}".format(minute, answer))
-            wait_a_minute(1)# wait_a_minute() a minute
+            wait_a_minute()# wait_a_minute() a minute
