@@ -57,4 +57,4 @@ if __name__ == "__main__":
         for minute in range(15):         
             answer = get_account_ids_to_run(lista_example, every_x_minute, minute)
             print("minute {} .... answer {}".format(minute, answer))
-            wait_a_minute(2)
+            wait_a_minute()
