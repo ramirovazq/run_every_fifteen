@@ -46,14 +46,15 @@ def wait_a_minute(minute=60):
 if __name__ == "__main__":
 
     # settings
-    number_list_example = 33 # size of example list
+    number_list_example = 30 # size of example list
     every_x_minute = 15 # ever 15 minutes
 
-    lista_example = [f'1{x:03}' for x in range(number_list_example)] # generates an example list
+    lista_example = [f'2{x:03}' for x in range(number_list_example)] # generates an example list
     print("............ original list example .....................")
     print(lista_example)
     print("............ answer .....................")
-    for minute in range(15):         
-        answer = get_account_ids_to_run(lista_example, every_x_minute, minute)
-        print("minute {} .... answer {}".format(minute, answer))
-        wait_a_minute()
+    while True: # always working, run as a deamon for better results
+        for minute in range(15):         
+            answer = get_account_ids_to_run(lista_example, every_x_minute, minute)
+            print("minute {} .... answer {}".format(minute, answer))
+            wait_a_minute(2)
